@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+  background-color:#1e2429;
+
+}
+.shadower{
+  box-shadow: 7px 3px 7px 3px black,
+  2px 3px 2px 3px red;
+}
+.caoursel{
+  border-radius:0px 21px 21px 0px;
+  background-image: url(../app//Assets/bg.jpg);
+  object-fit: cover;
+  background-size: 900px 520px;
+  background-repeat: no-repeat;
+  background-position: center;
+  height:100%;
+  width:100%;
+}
