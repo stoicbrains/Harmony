@@ -12,7 +12,7 @@ const UserForm = () => {
   const [formData, setFormData] = useState({});
   const [errorMessage, setErrorMessage] = useState("");
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     const value = e.target.value;
     const name = e.target.name;
     setFormData((prevState) => ({
@@ -21,7 +21,7 @@ const UserForm = () => {
     }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     setErrorMessage("");
     const res = await fetch("/api/Users", {
       method: "POST",

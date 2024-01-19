@@ -12,7 +12,7 @@ const LoginPage = () => {
   const [credentials,setcredentials] = useState({email:'',password:''})
   // Function to handle Google sign-in
   
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     setcredentials({
       ...credentials,
       [e.target.name]: e.target.value,
