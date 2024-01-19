@@ -38,7 +38,7 @@ const Page = () => {
     },
   });
 
-  const handleButtonClick = useCallback((i) => {
+  const handleButtonClick = useCallback((i:any) => {
     setIndex(i);
   }, [setIndex]);
 
