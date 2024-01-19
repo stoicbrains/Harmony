@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "cli": "^1.0.1",
     "framer-motion": "^10.16.16",
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.3",
@@ -22,7 +23,8 @@
     "sendbird-calls": "^1.10.16",
     "socket.io": "^4.7.3",
     "socket.io-client": "^4.7.3",
-    "spline": "^0.0.0"
+    "spline": "^0.0.0",
+    "vercel": "^33.1.0"
   },
   "devDependencies": {
     "@types/node": "^20",
