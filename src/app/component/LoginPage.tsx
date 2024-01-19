@@ -15,7 +15,7 @@ const LoginPage = () => {
   const handleChange = (e:any) => {
     setcredentials({
       ...credentials,
-      [e.target.name]: e.target.value,ve
+      [e.target.name]: e.target.value,
     });
   };
 
