@@ -11,7 +11,7 @@ const LoginPage = () => {
   const router = useRouter();
   const [credentials,setcredentials] = useState({email:'',password:''})
   // Function to handle Google sign-in
-  
+  const [trigger,setTrigger] = useState(false);
   const handleChange = (e:any) => {
     setcredentials({
       ...credentials,
@@ -75,10 +75,9 @@ const LoginPage = () => {
       setError("");
     }
   };
-
   if (sessionStatus === "loading") {
     return <h1 className='absolute top-[50%] right-[11%] transition-all duration-300 font-bold text-3xl tracking-wide'>Loading...</h1>;}
-  const [Trigger,setTrigger] = useState(false);
+  
 
   return (
     <div>
@@ -99,7 +98,7 @@ const LoginPage = () => {
           </div>
           <div>
             <input
-              type={Trigger?'text':'password'}
+              type={trigger?'text':'password'}
               name="password"
               placeholder="Password"
               className={styles.inputbox}
@@ -109,7 +108,7 @@ const LoginPage = () => {
               
 
             />
-            <Image src={png1} alt="null" className={styles.inputboxImg2} onClick={()=>{setTrigger(!Trigger)}}/>
+            <Image src={png1} alt="null" className={styles.inputboxImg2} onClick={()=>{setTrigger(!trigger)}}/>
           </div>
           <button
             type="button" // Change to "submit" if you want to submit the form after Google sign-in

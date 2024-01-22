@@ -26,7 +26,7 @@ const Navbar = async () => {
             <li><Link href={'/'} className='relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-white before:hover:w-full'>Home</Link></li>
             <li><Link href={'/'} className='relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-white before:hover:w-full'>AboutUs</Link></li>
             <li><Link href={isAdmin ? '/psychologist' : '/consult'} className='relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-white before:hover:w-full'>Consult</Link></li>
-            <li><Link href={'/'} className='relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-white before:hover:w-full'>Query</Link></li>
+            <li><Link href={'/Query'} className='relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-white before:hover:w-full'>Query</Link></li>
             </ul>
             <div>
               {session ? (

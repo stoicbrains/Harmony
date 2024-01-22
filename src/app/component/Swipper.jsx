@@ -17,7 +17,6 @@ const Swipper = ({ data },value) => {
            <div style={styleSlider}>
              {data.map((item, i) => (
                <div key={i} className={`h-full w-full absolute left-0 top-0 transition-all duration-500 overflow-hidden ${i === index ? '' : 'left-[-130%] opacity-0'}`}>
-                 <span className='absolute top-0 left-[50%] translate-x-[-50%] font-bold text-lg w-full text-center h-5'>Yoga Poses for stress relief</span>
                  <span className='absolute top-7 left-[50%] translate-x-[-50%] text-center font-semibold text-md'>{item.title}</span>
                  <Image src={item.url} alt='' className='transition-all duration-200' style={{ height: '100%', width: '100%', objectFit: 'cover' }} />
                </div>

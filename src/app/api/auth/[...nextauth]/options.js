@@ -17,6 +17,7 @@ export const options = {
           ...profile,
           id: profile.sub,
           role: userRole,
+          email:profile.email,
         };
       },
       clientId: process.env.GOOGLE_ID,

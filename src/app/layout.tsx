@@ -22,7 +22,7 @@ export default function RootLayout({
       <AuthProvider>
         <body>
           <Navbar />
-          <div className="overflow-hidden">{children}</div>
+          <div className="">{children}</div>
         </body>
       </AuthProvider>
     </html>
