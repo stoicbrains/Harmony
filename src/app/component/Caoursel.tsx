@@ -25,7 +25,7 @@ const obj = [
     }
 ]
 export default function Caoursel() {
-    const scroll = useRef(document.createElement('div'));
+    const scroll = useRef<any>();
     const [Value,setValue] = useState(0);
     //ts-error!
     useEffect(()=>{
