@@ -110,7 +110,7 @@ const LoginPage = () => {
             <Image src={png1} alt="null" className={styles.inputboxImg2} onClick={()=>{setTrigger(!trigger)}}/>
           </div>
           <button
-            type="button" // Change to "submit" if you want to submit the form after Google sign-in
+            type="button"
             onClick={handleGoogleLogin}
             className="flex justify-center items-center gap-2 h-[40px] w-[250px] rounded-[11px] border-2 border-black my-3 transition-all duration-300 hover:bg-green-100"
           >

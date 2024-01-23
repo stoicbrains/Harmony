@@ -5,7 +5,6 @@ import bcrypt from "bcrypt"
 export const options = {
   providers: [
     GoogleProvider({
-      
       profile(profile) {
         console.log("google profile:", profile);
 
@@ -18,14 +17,13 @@ export const options = {
           ...profile,
           id: profile.sub,
           role: userRole,
-          email:profile.email,
         };
       },
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_Secret,
     }),
     CredentialsProvider({
-      
+      // The name to display on the sign-in form (e.g., 'Sign in with...')
       name: 'Credentials',
       credentials: {
         email: { label: 'Email', type: 'text' },
@@ -53,12 +51,10 @@ export const options = {
           return Promise.resolve(null);
         }
       },
-     
     })
-    
+   
   ],
-  secret: process.env.NEXT_PUBLIC_SECRET,
-  
+  secret:'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',
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
@@ -67,8 +63,6 @@ export const options = {
         token.role = user.role;
       }
       return token;
-   
-  
     },
     async session({ session, token }) {
       if (session?.user) {
