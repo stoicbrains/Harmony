@@ -52,8 +52,12 @@ export const options = {
           return Promise.resolve(null);
         }
       },
+     
     })
+    
   ],
+  secret: process.env.NEXTAUTH_SECRET,
+  
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
