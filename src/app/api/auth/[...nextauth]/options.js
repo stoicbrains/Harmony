@@ -21,8 +21,8 @@ export const options = {
           email:profile.email,
         };
       },
-      clientId: process.env.GOOGLE_PUBLIC_ID,
-      clientSecret: process.env.GOOGLE_PUBLIC_SECRET,
+      clientId: process.env.GOOGLE_ID,
+      clientSecret: process.env.GOOGLE_Secret,
     }),
     CredentialsProvider({
       
