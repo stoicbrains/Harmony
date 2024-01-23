@@ -10,7 +10,6 @@ import { useRouter } from 'next/navigation';
 const LoginPage = () => {
   const router = useRouter();
   const [credentials,setcredentials] = useState({email:'',password:''})
-  // Function to handle Google sign-in
   const [trigger,setTrigger] = useState(false);
   const handleChange = (e:any) => {
     setcredentials({
