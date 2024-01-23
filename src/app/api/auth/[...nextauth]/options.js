@@ -24,7 +24,7 @@ export const options = {
       clientSecret: process.env.GOOGLE_Secret,
     }),
     CredentialsProvider({
-      // The name to display on the sign-in form (e.g., 'Sign in with...')
+      
       name: 'Credentials',
       credentials: {
         email: { label: 'Email', type: 'text' },

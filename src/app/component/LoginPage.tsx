@@ -20,7 +20,7 @@ const LoginPage = () => {
 
   const handleGoogleLogin = async () => {
     try {
-      await signIn('google', { callbackUrl: 'https://harmony-stoicbrains-github-81gsi7txt.vercel.app/' });
+      await signIn('google', { callbackUrl: '/' });
     } catch (error) {
       console.error('Google sign-in error:', error);
     }
@@ -32,7 +32,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (sessionStatus === "authenticated") {
-      router.replace("https://harmony-stoicbrains-github-81gsi7txt.vercel.app/");
+      router.replace("/");
       router.refresh()
     }
   }, [sessionStatus, router]);
