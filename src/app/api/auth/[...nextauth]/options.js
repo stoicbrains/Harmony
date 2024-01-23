@@ -23,7 +23,7 @@ export const options = {
       },
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_Secret,
-      callbackUrl: `${process.env.NEXTAUTH_URL}/api/auth/callback/google`,
+      callbackUrl: `${process.env.NEXTAUTH_URL}`,
     }),
     CredentialsProvider({
       
