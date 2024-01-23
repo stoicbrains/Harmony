@@ -1,4 +1,4 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose, { Schema } from "./mongodb";
 
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.Promise = global.Promise;
