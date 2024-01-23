@@ -5,6 +5,7 @@ import bcrypt from "bcrypt"
 export const options = {
   providers: [
     GoogleProvider({
+      
       profile(profile) {
         console.log("google profile:", profile);
 
@@ -22,6 +23,7 @@ export const options = {
       },
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_Secret,
+      callbackUrl: `${process.env.NEXTAUTH_URL}/api/auth/callback/google`,
     }),
     CredentialsProvider({
       

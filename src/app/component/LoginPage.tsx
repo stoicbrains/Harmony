@@ -20,7 +20,7 @@ const LoginPage = () => {
 
   const handleGoogleLogin = async () => {
     try {
-      await signIn('google', { callbackUrl: '/' });
+      await signIn('google', { callbackUrl: '../api/auth/[...nextauth]/options.js' });
     } catch (error) {
       console.error('Google sign-in error:', error);
     }
