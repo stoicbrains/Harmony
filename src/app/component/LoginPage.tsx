@@ -20,7 +20,7 @@ const LoginPage = () => {
 
   const handleGoogleLogin = async () => {
     try {
-      await signIn('google', { callbackUrl: '/' });
+      await signIn('google', { callbackUrl: 'https://harmony-stoicbrains-github-81gsi7txt.vercel.app/' });
     } catch (error) {
       console.error('Google sign-in error:', error);
     }

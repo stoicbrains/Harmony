@@ -118,7 +118,7 @@ const Page = () => {
                       }}
                     />
                   </p>
-                  <p className="text-[8px] relative top-[40%] left-[18%]">
+                  <p className="text-[7px] relative top-[40%] text-center">
                     {query.user}
                   </p>
                 </div>
