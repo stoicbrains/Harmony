@@ -66,6 +66,13 @@ export const options = {
         token.role = user.role;
       }
       return token;
+   
+  
+    },
+    async redirect(url, baseUrl) {
+      return url.startsWith(baseUrl)
+        ? Promise.resolve(url)
+        : Promise.resolve(baseUrl);
     },
     async session({ session, token }) {
       if (session?.user) {
