@@ -20,7 +20,7 @@ const LoginPage = () => {
 
   const handleGoogleLogin = async () => {
     try {
-      await signIn('google', {redirect:false});
+      await signIn('google', {callbackUrl:'/'});
     } catch (error) {
       console.error('Google sign-in error:', error);
     }
