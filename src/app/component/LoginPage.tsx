@@ -32,7 +32,7 @@ const LoginPage = () => {
 
   useEffect(() => {
     if (sessionStatus === "authenticated") {
-      router.replace("/");
+      router.replace("https://harmony-stoicbrains-github-81gsi7txt.vercel.app/");
       router.refresh()
     }
   }, [sessionStatus, router]);
