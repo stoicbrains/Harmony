@@ -19,8 +19,8 @@ export const options = {
           role: userRole,
         };
       },
-      clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_Secret,
+      clientId: process.env.NEXT_PUBLIC_GOOGLE_ID,
+      clientSecret: process.env.NEXT_PUBLIC_GOOGLE_Secret,
     }),
     CredentialsProvider({
       // The name to display on the sign-in form (e.g., 'Sign in with...')
