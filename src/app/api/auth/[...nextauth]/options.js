@@ -20,7 +20,7 @@ export const options = {
         };
       },
       clientId: process.env.GOOGLE_ID,
-      clientSecret: process.env.GOOGLE_Secret,
+      clientSecret: process.env.GOOGLE_SECRET,
     }),
     CredentialsProvider({
       // The name to display on the sign-in form (e.g., 'Sign in with...')
