@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-import { Inter, Poppins, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "./component/Navbar";
 import AuthProvider from "./component/AuthProvider";
+import Chatbot from '../app/component/ChatBot'
 
-// const inter = Inter({ subsets: ['latin'] })
-// const poppins = Poppins({weight:'500',subsets:['latin']})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,6 +20,9 @@ export default function RootLayout({
       <AuthProvider>
         <body>
           <Navbar />
+          <div>
+            <Chatbot/>
+          </div>
           <div className="">{children}</div>
         </body>
       </AuthProvider>

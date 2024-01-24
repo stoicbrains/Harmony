@@ -7,11 +7,13 @@ import bg3 from './Assets/embroidary3.png'
 import bg4 from '../app/Assets/embroidary4.png'
 import {motion} from 'framer-motion'
 import Image from "next/image";
+import Loader from "./component/Loader";
 
 
 export default function page() {
   return (
     <>
+    <Loader/>
       <div className="h-screen w-screen absolute top-[0] left-0 overflow-hidden">
       <motion.div className="absolute left-0 top-0 z-[-10] " animate={{rotate:[0,2,-2,0],x:[0,-5,5,0],y:[0,-5,0]}} transition={{duration:1.5,delay:1,repeat:Infinity}}>
       <Image src={bg} alt="error" style={{rotate:'180deg', height:'300px', width:'400px',translate:'-70% -5%'}}/>

@@ -7,8 +7,10 @@ import person from "../Assets/person.png";
 import { app } from '../firebase';
 import User from "../(models)/User";
 import { doc } from "firebase/firestore";
+import {redirect} from 'next/navigation'
 
 const db = getFirestore(app);
+
 
 const Page = () => {
   const [newQuestion, setNewQuestion] = useState("");
@@ -63,14 +65,14 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="absolute top-[5rem] left-[50%] translate-x-[-40%] h-[80vh] w-[80vw] rounded-xl ">
-      <div className="text-black text-2xl font-bold w-full text-left mt-[1rem]">
+    <div className="absolute top-[8rem] left-[50%] translate-x-[-50%] h-[80vh] w-[80vw] rounded-xl bg-gray-500 overflow-y-scroll scroll-smooth">
+      <div className="text-black text-2xl font-bold w-full text-center mt-[1rem]">
         {queries.length === 0
           ? "No Discussions yet, Start the Discussion"
           : "The Discussion has been started"}
       </div>
       <form action="">
-        <div className="flex justify-start items-center gap-[3rem] my-3">
+        <div className="flex justify-center items-center gap-[3rem] my-3">
           <textarea
             name="Question"
             id="new"
@@ -83,7 +85,7 @@ const Page = () => {
           <button
             type="button"
             onClick={onSubmit}
-            className="h-[50px] w-[70px] bg-red-400 rounded-lg font-semibold hover:bg-red-600 transition-all duration-150"
+            className="h-[50px] text-white w-[70px] bg-purple-700 rounded-lg font-semibold hover:bg-purple-950 transition-all duration-150"
           >
             Post
           </button>
@@ -94,14 +96,14 @@ const Page = () => {
       </form>
 
       <div>
-        <ul className="w-[100%] h-[100%] relative left-[50%] translate-x-[-50%] text-black text-lg flex flex-col gap-[1rem] justify-center items-start">
+        <ul className="w-[100%] h-[100%] relative left-[50%] translate-x-[-50%] text-black text-lg flex flex-col gap-[1rem] justify-center items-center">
           {queries.map((query) => (
             <li
               key={query.id}
-              className="bg-gray-800 text-white h-[200px] w-[80%] rounded-xl"
+              className="bg-gray-800 text-white h-[200px] w-[80%] rounded-xl p-[1rem]"
             >
               <div className="flex justify-start items-center h-full w-full gap-7">
-                <div className="flex-col gap-3 border-r-2 border-white h-full w-[10%]">
+                <div className="flex-col gap-3 border-r-2 border-white h-full w-[15%]">
                   <p className="bg-white rounded-[50px] h-[40px] w-[40px] relative overflow-hidden left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%]">
                     <Image
                       src={person}
@@ -125,7 +127,7 @@ const Page = () => {
 
                 <p className="rounded-xl w-[80%] text-white text-sm">{query.question}</p>
               </div>
-              <div className={query.user===session?.user?.email?"h-[40px] w-[70px] relative left-[90%] bottom-[60%] z-50":"hidden"}><button className="bg-purple-700 h-[40px] w-[70px] rounded-lg z-10 text-sm hover:bg-purple-950 transition-all duration-200" onClick={()=>{
+              <div className={query.user===session?.user?.email?"h-[40px] w-[70px] relative left-[102%] bottom-[60%] z-50":"hidden"}><button className="bg-purple-700 h-[40px] w-[70px] rounded-lg z-10 text-sm hover:bg-purple-950 transition-all duration-200" onClick={()=>{
                 onDelete(query.id)
               }}>Delete</button></div>
             </li>

@@ -20,13 +20,12 @@ const Navbar = async () => {
   return (
     <>
       <div className='relative z-10 top-0 left-0 '>
-        <span className='absolute top-[0.5rem] left-0 text-[2rem] font-extrabold tracking-[5px] text-green-950'>Har<span className='text-green-800'>mony</span></span>
-        <div className='flex justify-end translate-x-[-10rem] translate-y-[0.9rem]'>
-          <ul className='flex justify-center gap-[3rem] text-green-900 font-semibold tracking-[3px]'>
-            <li><Link href={'/'} className='relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-white before:hover:w-full'>Home</Link></li>
-            <li><Link href={'/'} className='relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-white before:hover:w-full'>AboutUs</Link></li>
-            <li><Link href={isAdmin ? '/psychologist' : '/consult'} className='relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-white before:hover:w-full'>Consult</Link></li>
-            <li><Link href={'/Query'} className='relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-white before:hover:w-full'>Query</Link></li>
+        <span className='absolute top-[0.7rem] left-0 lg:text-[1.5rem] font-extrabold tracking-[5px] text-green-950 text-[1rem] lg:tracking-[1rem]'>Har<span className='text-green-800'>mony</span></span>        <div className='flex justify-end translate-x-[-10rem] translate-y-[0.9rem]'>
+          <ul className='flex sm:justify-center gap-[3rem] text-green-900 font-semibold tracking-[3px] sm:text-[15px] text-[11px] lg:text-[17px]'>
+            <li><Link href={'/'} className='relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full'>Home</Link></li>
+            <li><Link href={'/'} className='relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full'>AboutUs</Link></li>
+            <li><Link href={isAdmin ? '/psychologist' : '/consult'} className='relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full'>Consult</Link></li>
+            <li><Link href={'/Query'} className='relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full'>Query</Link></li>
             </ul>
             <div>
               {session ? (
