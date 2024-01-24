@@ -17,7 +17,12 @@ const Page = () => {
   const [queries, setQueries] = useState<any[]>([]);
   const [profilename, setProfilename] = useState<string | undefined>("");
 
-  const { data: session, status } = useSession();
+  const { data: session, status } = useSession({
+    required:true,
+    onUnauthenticated(){
+      redirect('/api/auth/signin')
+    }
+  });
 
   const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setNewQuestion(e.target.value);
