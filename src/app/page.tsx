@@ -10,6 +10,7 @@ import Image from "next/image";
 import Loader from "./component/Loader";
 
 
+
 export default function page() {
   return (
     <>

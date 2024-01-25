@@ -1,9 +1,7 @@
 "use client"
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
-import { options } from "../api/auth/[...nextauth]/options";
 import Call from '../component/Call'
-import Receive from '../component/receive'
 const page = () =>{
     const {data:session} = useSession(
         {
@@ -18,7 +16,6 @@ const page = () =>{
                 <div className="h-full w-full">
                 <Call/>
                 </div>
-            
             </div>
             
             

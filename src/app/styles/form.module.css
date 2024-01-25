@@ -59,3 +59,7 @@
 .inputboxImg5:hover{
     cursor: pointer;
 }
+
+.loader{
+    filter: drop-shadow(11px 11px 18px gray);
+}
