@@ -29,7 +29,7 @@ export default function page() {
       <Image src={bg4} alt="error" style={{rotate:'10deg', height:'710px', width:'610px',translate:'74% 9%'}}/>
     </motion.div>
 
-        <div className="h-[70%] w-[75%] bg-sky-600 rounded-[21px] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] [box-shadow:15px_15px_10px_10px_rgba(100,100,100,0.6)]">
+        <div className="h-[70%] w-[75%] bg-[#feffe1]  rounded-[21px] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] [box-shadow:15px_15px_10px_10px_rgba(100,100,100,0.6)]">
           <div className="grid [grid-template-columns:30%_70%] h-full w-full rounded-[21px]">
             <div className="h-full text-black overflow-hidden relative z-[1] before:absolute before:z-[-1] before:left-0 before:[border-radius:21px_0px_0px_21px] before:top-0 before:h-[100%] before:w-0 before:[background-color:#ffed9c] before:transition-all before:duration-500 before:ease-in-out before:hover:w-[100%]">
               <div className="flex justify-center items-center h-full w-full">
