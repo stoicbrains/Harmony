@@ -1,8 +1,7 @@
 .box{
     position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: 5rem;
+    top: 7rem;
+    right: 1.4%;
     transition: all 250ms linear;
 }
 .inputbox{
