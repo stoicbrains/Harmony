@@ -1,5 +1,5 @@
 .box{
-    position: relative;
+    position: absolute;
     left: 50%;
     transform: translate(-50%);
     top: 5rem;
@@ -62,4 +62,5 @@
 
 .loader{
     filter: drop-shadow(11px 11px 18px gray);
+    object-fit: cover;
 }

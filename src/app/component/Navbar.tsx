@@ -40,7 +40,7 @@ const Navbar = async () => {
             </li>
             <li>
               <Link
-                href={"/"}
+                href={"/AboutUs"}
                 className="relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full"
               >
                 AboutUs

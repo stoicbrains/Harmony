@@ -45,7 +45,7 @@ const Page = () => {
 
   return (
     <>
-      <div className={`transition-all overflow-hidden scroll-smooth w-[100%] ${trigger ? "" : "hidden"}`}>
+      <div className={`transition-all overflow-hidden scroll-smooth w-[100%] ${trigger ? "" : "hidden"}`} style={{scrollbarWidth:'thin'}}>
         <div className="flex justify-center scroll-smooth my-[3rem]">
           <div className="h-[70vh] w-[90vw] scroll-smooth rounded-xl bg-gray-400 absolute top-[10rem] left-[50%] translate-x-[-50%] [box-shadow:15px_15px_10px_10px_rgba(100,100,100,0.6)]">
             <div className="flex justify-center items-center h-full w-full">

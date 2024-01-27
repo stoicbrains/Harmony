@@ -70,7 +70,7 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="absolute top-[8rem] left-[50%] translate-x-[-50%] h-[80vh] w-[80vw] rounded-xl bg-gray-500 overflow-y-scroll scroll-smooth">
+    <div className="absolute top-[8rem] left-[50%] translate-x-[-50%] h-[80vh] w-[80vw] rounded-xl bg-gray-500 overflow-y-scroll scroll-smooth" style={{scrollbarWidth:'thin'}}>
       <div className="text-black text-2xl font-bold w-full text-center mt-[1rem]">
         {queries.length === 0
           ? "No Discussions yet, Start the Discussion"

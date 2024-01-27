@@ -1,8 +1,6 @@
 import SendBirdCall from 'sendbird-calls';
           import React, { useState, useEffect } from 'react';
           import Login from './Login';
-          import Dialer from './Dialer';
-import { redirect } from 'next/navigation';
           const Receive = () => {
             const [userId, setUserId] = useState('');
             const [call, setCall] = useState(null);

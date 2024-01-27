@@ -32,22 +32,22 @@ const Loader = () => {
     <div
       ref={containerRef}
       className={`w-screen bg-[#effaf6] absolute left-0 top-0 z-[100] overflow-y-scroll overflow-x-hidden transition-all duration-500 ${
-        stop === 0 ? "h-0" : "h-screen"}`}>
+        stop === 0 ? "h-0" : "h-screen"}`} style={{scrollbarWidth:'thin'}}>
       <motion.div
         variants={{
           visible: { opacity: 1, translateY: 0 },
-          hidden: { opacity: 0, translateY: 95 },
+          hidden: { opacity: 0, translateY: 500},
         }}
         initial="hidden"
         animate={control}
-        transition={{ delay: 0.1, duration: 0.5, ease: "linear" }}
+        transition={{ delay: 0.15, duration: 0.5, ease: "easeIn" }}
         className="relative left-0 top-[0] h-full w-full z-[50] transition-all duration-200"
       >
         <h1 className="text-4xl font-bold text-center translate-y-[3rem] relative transition-all duration-200 ease-linear">
         <span className="tracking-[1rem] text-green-950">Har<span className="text-green-800">mony</span></span><span className="overflow-hidden flex justify-center items-center absolute top-0 left-[58%] translate-y-[-0.8rem]"><Image src={logo} alt="" objectFit="cover" style={{height:'70px',width:'60px'}}/></span>
         </h1>
         <div className="h-[90%] w-[60%] text-white relative left-[50%] translate-x-[-50%] ">
-          <Image src={loader} alt="" objectFit="cover" className={styles.loader}/>
+          <Image src={loader} alt="" className={styles.loader}/>
         </div>
         <span></span>
       </motion.div>
