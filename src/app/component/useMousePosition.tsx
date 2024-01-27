@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 const useMousePosition = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
-  const updatePosition = (e) => {
+  const updatePosition = (e:any) => {
     setPosition({ x: e.clientX, y: e.clientY });
   };
 
