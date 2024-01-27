@@ -139,7 +139,7 @@ const Call = () => {
                     <h2>
                       {call.isVideoCall ? "Video" : "Audio"} Call is Connected
                     </h2>
-                    <div className="flex space-x-4 absolute left-[50%] translate-x-[-50%] bottom-[-10%] z-[100]">
+                    <div className="flex space-x-4 absolute left-[50%] translate-x-[-50%] bottom-[-14%] z-[100]">
                       <button
                         onClick={() => {
                           setMuted(!muted);

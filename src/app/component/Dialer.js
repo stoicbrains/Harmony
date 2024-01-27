@@ -10,7 +10,7 @@ import React, { useState } from 'react';
               makeCall({ userId, isVideoCall });
             };
             return (
-              <div className='bg-gray-100 rounded-md px-12 py-14 flex flex-col space-y-4 absolute z-10'>
+              <div className='bg-gray-100 rounded-md px-12 py-14 flex flex-col space-y-4 absolute left-[50%] translate-x-[-50%] z-10'>
                 <div className='font-bold text-xl text-center'>Dial Someone</div>
                 <div>
                   <label
