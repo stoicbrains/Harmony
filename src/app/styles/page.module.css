@@ -18,9 +18,11 @@
       #para{
         width: 1000px;
         padding:40px;
+        overflow: hidden;
       }
       #span{
         color: #ec4e39;
+        overflow: hidden;
       }
     }
   

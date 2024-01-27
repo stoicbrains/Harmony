@@ -6,13 +6,6 @@ import { motion } from 'framer-motion';
 import { useAnimation, useInView } from 'framer-motion';
 
 export default function Home() {
-  const DivRef = useRef(null);
-  const control = useAnimation();
-  const View = useInView(DivRef, { once: true });
-
-  useEffect(() => {
-    if (View) control.start('visible');
-  }, [View]);
 
   const [isHovered, setIsHovered] = useState(false);
   const { x, y } = useMousePosition();
@@ -20,14 +13,6 @@ export default function Home() {
   const size = isHovered ? 600 : 40;
 
   return (
-    <motion.div
-      ref={DivRef}
-      variants={{ hidden: { opacity: 0, translateX: 25 }, visible: { opacity: 1, translate: 0 } }}
-      initial='hidden'
-      transition={{ delay: 0.25, ease: 'easeInOut', duration: 0.5 }}
-      animate={control}
-      className='absolute left-[0] top-[0] z-40 h-[100%] w-[100%] overflow-hidden'
-    >
       <main className={styles.main}>
         <motion.div
           className={styles.mask}
@@ -56,6 +41,5 @@ export default function Home() {
           </p>
         </div>
       </main>
-    </motion.div>
   );
 }
