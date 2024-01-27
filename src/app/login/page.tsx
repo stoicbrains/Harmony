@@ -10,7 +10,7 @@ const page = () => {
   const [Switch,setSwitch] = useState(false);
   return (
     <div className='h-screen w-screen bg-blue-950 opacity-0.8 absolute z-10 top-0'>
-    <div className='bg-sky-100 h-[500px] w-[800px] rounded-xl shadow-xl shadow-black relative translate-y-[10%] left-[50%] translate-x-[-50%] overflow-hidden'>
+    <div className='bg-sky-100 h-[500px] w-[800px] rounded-xl shadow-xl shadow-black relative left-[50%] translate-x-[-50%] top-[50%] translate-y-[-50%] overflow-hidden'>
       
       <div className='h-full w-100% grid [grid-template-columns:60%_40%]'>
       <div className='bg-sky-600'><Image alt ="" src={last} style={{height:"100%",width:'100%',objectPosition:'center',objectFit:'cover'}}/></div>
