@@ -65,7 +65,7 @@ const Loader = () => {
           }}
           initial="hidden"
           animate={slide}
-          transition={{ duration: 0.5, ease: "easeIn",delay:0.25 }}
+          transition={{ duration: 0.7, ease: "easeInOut",delay:0.4 }}
           style={{
             position: "absolute",
             top: 0,
