@@ -25,7 +25,7 @@ import React from 'react';
                           type='text'
                           id='userId'
                           name='userId'
-                          className='block flex-1 border-0 bg-transparent text-center h-[2rem] text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+                          className='block flex-1 border-0 bg-transparent text-center h-[2rem] text-white placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
                           placeholder='Enter Your User ID...'
                           required
                         />
