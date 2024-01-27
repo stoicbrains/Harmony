@@ -5,24 +5,27 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 import person from "../Assets/person.png";
 import { app } from '../firebase';
-import User from "../(models)/User";
+import {options} from '../api/auth/[...nextauth]/options.js'
+import { getServerSession } from "next-auth";
 import { doc } from "firebase/firestore";
 import {redirect} from 'next/navigation'
 
 const db = getFirestore(app);
 
-
 const Page = () => {
   const [newQuestion, setNewQuestion] = useState("");
   const [queries, setQueries] = useState<any[]>([]);
-  const [profilename, setProfilename] = useState<string | undefined>("");
 
+  const [profilename, setProfilename] = useState<string | undefined>("");
+  
+  
   const { data: session, status } = useSession({
     required:true,
     onUnauthenticated(){
       redirect('/api/auth/signin')
     }
   });
+  const AdminAccess = session?.user?.role;
 
   const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setNewQuestion(e.target.value);
